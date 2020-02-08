@@ -1,5 +1,4 @@
 array-to-latex==0.73
-atomate==0.9.1
 beautifulsoup4==4.8.2
 certifi==2019.11.28
 Click==7.0
