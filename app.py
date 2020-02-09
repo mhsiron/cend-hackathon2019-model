@@ -12,7 +12,7 @@ import json
 main_data = pd.read_pickle("./static/data-with-dates-converted.pickle")
 print(main_data.columns)
 
-def create_plot():
+def create_plot(filter=None):
     data_limited = main_data[main_data["new_case_highest-N-text_extract"].notnull()]
 
     fig = go.Figure(
@@ -53,6 +53,23 @@ def index():
     return render_template('index.html', title="Welcome", plot=map,
                            table=reduced_data,date=datetime.date(2020,1,27))
 
+@app.route('/<year>/<month>/<day>/')
+def load_from_date_filter(year,month,day):
+    map, data = create_plot(datetime.date(year,month,day))
+
+    columns = ['Source', 'descriptions', 'titles', 'dates',
+               'locations_identified_titles', 'latlon_titles',
+               'new_case_highest-N-text_extract',
+               'acc_case_highest-N-text_extract',
+               'locations_identified_descriptions',
+               'acc_case_highest-N-prob',
+               'new_case_highest-N-prob',
+               'acc_case_highest-I-text',
+               'new_case_highest-I-text']
+    reduced_data = data[columns]
+
+    return render_template('index.html', title="Welcome", plot=map,
+                           table=reduced_data, date=datetime.date(2020, 1, 27))
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0',)

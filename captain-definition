@@ -1,7 +1,7 @@
 {
 	"schemaVersion" :2 ,
 	"dockerfileLines" :[
-		"FROM continuumio/miniconda3",
+		"FROM continuumio/miniconda3:4.6.14",
 		"RUN mkdir -p /usr/src/",
 		"RUN mkdir -p /usr/src/static",
 		"RUN mkdir -p /usr/src/templates",
@@ -11,7 +11,6 @@
 		"COPY ./templates /usr/src/templates/",
 		"WORKDIR /usr/src/",
 		"RUN ls -a",
-        "RUN apt-get update && apt-get -y install curl libpq-dev python-dev postgresql-client && apt-get -y install python build-essential python-pip && apt-get -y install libblas-dev liblapack-dev gfortran && rm -rf /var/lib/apt/lists/*",
         "RUN mkdir -p /opt/pandas/build/",
         "RUN [\"conda\", \"create\", \"-n\", \"myenv\", \"python=3.7\"]",
         "RUN /bin/bash -c \"source activate myenv\"",
