@@ -1,19 +1,18 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
-
-import plotly
 import plotly.graph_objs as go
 import datetime
 
 import pandas as pd
-import numpy as np
-import json
 
 main_data = pd.read_pickle("./static/data-with-dates-converted.pickle")
 print(main_data.columns)
 
 def create_plot(filter=None):
     data_limited = main_data[main_data["new_case_highest-N-text_extract"].notnull()]
+
+    if filter:
+        data_limited = data_limited[data_limited["dates"]<filter]
 
     fig = go.Figure(
         go.Densitymapbox(lat=data_limited["lat"], lon=data_limited["lon"],
@@ -37,9 +36,22 @@ def create_plot(filter=None):
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['POST','GET'])
 def index():
-    map,data= create_plot()
+    map, data = create_plot()
+    date = datetime.date(2020,1,27)
+
+
+
+    if request.method == "POST":
+        filter = pd.Timestamp(request.form.get("date"))
+        date = filter
+        map, data = create_plot(filter)
+
+    cases = data[data["new_case_highest-N-text_extract"] < 200][
+        "new_case_highest-N-text_extract"].sum()
+
+
     columns = ['Source', 'descriptions', 'titles', 'dates',
                'locations_identified_titles','latlon_titles',
                'new_case_highest-N-text_extract',
@@ -51,11 +63,19 @@ def index():
                'new_case_highest-I-text']
     reduced_data = data[columns]
     return render_template('index.html', title="Welcome", plot=map,
-                           table=reduced_data,date=datetime.date(2020,1,27))
+                           table=reduced_data,date=date, cases=cases)
+@app.route('/date', methods=['GET', 'POST'])
+def change_features():
 
-@app.route('/<year>/<month>/<day>/')
+    filter = request.args['datefield']
+    graphJSON= create_plot(pd.Timestamp(filter))[0]
+
+    return graphJSON
+
+@app.route('/<int:year>/<int:month>/<int:day>/')
 def load_from_date_filter(year,month,day):
-    map, data = create_plot(datetime.date(year,month,day))
+    date = pd.Timestamp(year,month,day)
+    map, data = create_plot(date)
 
     columns = ['Source', 'descriptions', 'titles', 'dates',
                'locations_identified_titles', 'latlon_titles',
@@ -69,7 +89,7 @@ def load_from_date_filter(year,month,day):
     reduced_data = data[columns]
 
     return render_template('index.html', title="Welcome", plot=map,
-                           table=reduced_data, date=datetime.date(2020, 1, 27))
+                           table=reduced_data, date=date)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0',)

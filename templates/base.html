@@ -9,6 +9,7 @@
         <title>nCov2019 - {{ title }}</title>
         <link href="{{ url_for("static",filename="dist/css/styles.css") }}" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <link href="{{ url_for("static",filename="dist/css/bootstrap-datepicker.css") }}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
@@ -41,6 +42,13 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Blogpost</a>
                         </div>
+                    </div>
+                    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                      <div class="card-header">Total Cases</div>
+                      <div class="card-body">
+                        <h5 class="card-title">{{ cases }} cases</h5>
+                        <p class="card-text">Based on the model, as of {{ date }}</p>
+                      </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
@@ -80,6 +88,8 @@
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="{{ url_for("static",filename="dist/assets/demo/datatables-demo.js") }}"></script>
+        <script src="{{ url_for("static",filename="dist/js/bootstrap-datepicker.js") }}"></script>
+        <script src="{{ url_for('static',filename='dist/js/plot.js') }}"></script>
     </body>
 </html>
 

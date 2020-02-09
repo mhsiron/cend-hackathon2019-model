@@ -30,6 +30,18 @@
                         Plotly.plot('bargraph',graphs,{});
                     </script>
                 </div>
+                <div>
+                    <strong> Filter by date: </strong>
+                    <form id="datefilter" method="post">
+                        <div class="input-group date" data-provide="datepicker">
+                            <input name="date" id="datefield" type="text" class="form-control">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                                <button type="submit" class="btn btn-primary mb-2">Filter</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
