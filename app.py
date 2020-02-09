@@ -43,7 +43,12 @@ def index():
     columns = ['Source', 'descriptions', 'titles', 'dates',
                'locations_identified_titles','latlon_titles',
                'new_case_highest-N-text_extract',
-               'acc_case_highest-N-text_extract']
+               'acc_case_highest-N-text_extract',
+               'locations_identified_descriptions',
+               'acc_case_highest-N-prob',
+               'new_case_highest-N-prob',
+               'acc_case_highest-I-text',
+               'new_case_highest-I-text']
     reduced_data = data[columns]
     return render_template('index.html', title="Welcome", plot=map,
                            table=reduced_data,date=datetime.date(2020,1,27))
