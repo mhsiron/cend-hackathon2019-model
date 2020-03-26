@@ -9,6 +9,7 @@
 		"COPY ./requirements.txt /usr/src/",
 		"COPY ./app.py /usr/src/",
 		"COPY ./templates /usr/src/templates/",
+		"COPY ./regulation_data.csv /usr/src/"
 		"WORKDIR /usr/src/",
 		"RUN ls -a",
         "RUN mkdir -p /opt/pandas/build/",
