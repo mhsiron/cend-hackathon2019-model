@@ -39,8 +39,10 @@
                           <label class="col-md-4 control-label" for="geo-area">Geographic Area:</label>
                           <div class="col-md-5">
                             <select id="geo-area" name="geo-area" class="form-control">
-                              <option value="1">Option one</option>
-                              <option value="2">Option two</option>
+                                <option value="0">All</option>
+                                <option value="California">California</option>
+                                <option value="China">China</option>
+                                <option value="New York">New York</option>
                             </select>
                           </div>
                         </div>
@@ -134,85 +136,41 @@
 {#               'locations_identified_titles','latlon_titles',#}
 {#               'new_case_highest-N-text_extract',#}
 {#               'acc_case_highest-N-text_extract']#}
-                                                <th>Source</th>
-                                                <th>Title</th>
+                                                <th>State</th>
+                                                <th>Date</th>
+                                                <th>Regulation</th>
+                                                <th>Score</th>
+                                                <th>Level</th>
                                                 <th>Description</th>
-                                                <th>Dates</th>
-                                                <th>Identified Locations</th>
-                                                <th>Identified New Cases</th>
-                                                <th>Identified Accumulated Cases</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>Source</th>
-                                                <th>Title</th>
+                                                <th>State</th>
+                                                <th>Date</th>
+                                                <th>Regulation</th>
+                                                <th>Score</th>
+                                                <th>Level</th>
                                                 <th>Description</th>
-                                                <th>Dates</th>
-                                                <th>Identified Locations</th>
-                                                <th>Identified New Cases</th>
-                                                <th>Identified Accumulated Cases</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                        {% if table %}
-{#                                        {%  for index, row in table %}#}
-{#                                            <tr>#}
-{#                                                <td>{{ row["Source"] }}</td>#}
-{#                                                <td>{{ row["titles"] }}</td>#}
-{#                                                <td>{{ row["descriptions"] }}</td>#}
-{#                                                <td>{{ row["dates"] }}</td>#}
-{#                                                <td>{{ row["locations_identified_titles"] }}</td>#}
-{#                                                <td>{{ row["new_case_highest-N-text_extract"] }}</td>#}
-{#                                                <td>{{ row["acc_case_highest-N-text_extract"] }} <br>#}
-{#                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#details-{{ index }}">#}
-{#                                                      Details#}
-{#                                                    </button>#}
-{#                                                </td>#}
-{#                                            </tr>#}
-{#                                        {%  endfor %}#}
-                                        {% endif %}
+                                        {%  for index, row in table.iterrows() %}
+                                            <tr>
+                                                <td>{{ row["State"] }}</td>
+                                                <td>{{ row["Date"] }}</td>
+                                                <td>{{ row["Regulation"] }}</td>
+                                                <td>{{ row["Score"] }}</td>
+                                                <td>{{ row["Fed/State/Area"] }}</td>
+                                                <td>{{ row["Description (5-7 words)"] }}</td>
+                                            </tr>
+                                        {%  endfor %}
                                         </tbody>
                                     </table>
             </div>
         </div>
     </div>
 </div>
-
-    {%  if table %}
-{% for index, row in table.iterrows() %}
-
-    <!-- Modal -->
-    <div class="modal fade" id="details-{{ index }}" tabindex="-1" role="dialog"  aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">{{ row["titles"] }}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Description: </strong> {{ row["descriptions"] }}</p>
-                    <p><strong>Identified Locations in Title: </strong> {% for loc in row["locations_identified_titles"] %}{{ loc }}, {% endfor %}</p>
-                    <p><strong>Identified Locations in Description: </strong> {% for loc in row["locations_identified_descriptions"] %}{{ loc }}, {% endfor %}</p>
-                    <p><strong>Identified Accumulated Case:</strong> {{ row["acc_case_highest-N-text_extract"] }}
-                        <span class="badge badge-warning">(Prob. {{ (100*row['acc_case_highest-N-prob'])|round(2) }} %)</span> <br>
-                    From text: {{ row['acc_case_highest-I-text'] }}</p>
-                    <p><strong>Identified New Case:</strong> {{ row["new_case_highest-N-text_extract"]}}
-                        <span class="badge badge-warning">(Prob. {{ (100*row['new_case_highest-N-prob'])|round(2) }} %)</span> <br>
-                    From text: {{ row['new_case_highest-I-text'] }}</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-{% endfor%}
-    {% endif %}
 
 {%  endblock %}
 

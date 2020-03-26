@@ -1,0 +1,154 @@
+State,Date,Regulation,Score,Fed/State/Area,Description (5-7 words)
+California,27-Jan,1,1,Federal ,Level 4 Travel Advisory to Epicenter
+California,30-Jan,1,1,Federal ,Level 4 Travel Advisory to China
+California,22-Feb,1,0.5,Federal ,Level 2 Travel Advisory to Japan
+California,22-Feb,1,0.5,Federal ,Level 2 Travel Advisory to S. Korea
+California,23-Feb,1,0.5,Federal ,Level 1 Travel Advisory for Iran
+California,23-Feb,1,0.5,Federal ,Level 1 Travel Advisory for Italy
+California,24-Feb,1,0.5,Federal ,Level 3 Travel Advisory to S. Korea (CDC)
+California,24-Feb,1,0.5,Federal ,Level 2 Travel Advisory to Iran
+California,24-Feb,1,0.5,Federal ,Level 2 Travel Advisory to Italy
+California,25-Feb,0,0.5,Federal ,San Francisco declares state of emergency (allows city officials to assemble resources and personnel to expendite emergency planning measures and boost the ability to deploy a rapid response)
+California,25-Feb,14,0.5,Federal ,"CDC warns people to ""prepare"""
+California,26-Feb,1,0.5,Federal ,Level 3 Travel Advisory to S. Korea (U.S. Dept. of State)
+California,28-Feb,5,1,State,USDPH secured test kits to get results sooner
+California,3-Mar,13,1,State,CA made available some emergency reserves of N95 masks available for use in certain healthcare settings
+California,4-Mar,5,0.5,Federal ,CDC widens testing guidelines
+California,4-Mar,15,0.5,State,CA declares state of emergency
+California,5-Mar,5,1,State,24m more Americans made eligible for free covid-19 testing
+California,6-Mar,15,0.5,State,CA activated the State Operations Center and the Medical and Health Coordination Center to coordinate response efforts across the state
+California,11-Mar,1,0.5,Federal ,Travel Restricted from Europe to U.S. for 30 days
+California,11-Mar,9,1,State,CA directs mass gatherings be postponed or cancelled
+California,13-Mar,14,0.5,State,"Caltrans education campaign on more than 700 electronic highway signs, urging Californians to be more diligent about containing the spread of the virrus"
+California,13-Mar,0,0.5,Federal ,Trump declares national emergency (frees $50b in federal reserves to fight coronavirus)
+California,13-Mar,4,0.5,State,More opportunities for sick individuals to recieve relief from going to work
+California,16-Mar,9,0.5,State,DMV allowing customers to avoid coming in for 60 days
+California,16-Mar,14,0.5,State,Resource page created outlining how Californians can help community members
+California,16-Mar,4,0.5,State,CA Executive order to protect Californians who are most vulnerable in healthcare settings by sending resources their way
+California,16-Mar,13,0.5,State,CA Executive order to protect Californians who are most vulnerable in healthcare settings by sending resources their way
+California,16-Mar,14,0.5,State,State-issued guidance for vulnerable Californians
+California,17-Mar,2,1,Bay Area,"Bay Area shelter-in-place order (close gyms, bars, restaurants except takeout/delivery)"
+California,17-Mar,8,1,Bay Area,"Bay Area shelter-in-place order (close gyms, bars, restaurants except takeout/delivery)"
+California,17-Mar,6,1,Bay Area,"Bay Area shelter-in-place order (close gyms, bars, restaurants except takeout/delivery)"
+California,17-Mar,9,1,Bay Area,Routine medical appointments to be cancelled
+California,17-Mar,13,1,Bay Area,Routine medical appointments to be cancelled
+California,17-Mar,8,1,Bay Area,All nonessential gatherings of any size are banned
+California,17-Mar,4,1,State,Bars and clubs to close; Restaurants open only for pick up/delivery
+California,17-Mar,6,1,State,Bars and clubs to close; Restaurants open only for pick up/delivery
+California,17-Mar,7,1,State,Guidance to schools to practice distance learning
+California,17-Mar,4,0.5,State,Removed barriers to make healthcare more accessible
+California,17-Mar,15,0.5,State,Governor placed National Guard on alert
+California,18-Mar,5,0.5,Federal ,Coronavirus relief package signed (includes free testing for Covid-19 and paid emergency leave)
+California,18-Mar,9,0.5,Federal ,Coronavirus relief package signed (includes free testing for Covid-19 and paid emergency leave)
+California,18-Mar,9,1,State,Suspend standardized testing
+California,18-Mar,14,0.5,State,CA launched a website to boost covid-19 awareness
+California,18-Mar,9,0.5,State,Further regulations at the DMV
+California,19-Mar,2,1,State,Stay-at-home order from Governor
+California,19-Mar,8,1,State,Stay-at-home order from Governor
+California,19-Mar,9,1,State,Stay-at-home order from Governor
+California,19-Mar,6,1,State,Stay-at-home order from Governor
+California,19-Mar,14,0.5,State,Educational resources to employers
+California,19-Mar,1,1,Federal ,Global Level 4 Health Advisory- Do Not Travel
+California,20-Mar,15,1,State,500 members of National Guard activated to distribute food at food banks and help the most vulnerable residents
+California,21-Mar,4,0.5,State,Executive order allowing for the increase in health care capacity
+California,21-Mar,4,0.5,State,More funding to expand healthcare infrastructure
+California,21-Mar,13,1,State,CA recieved PPE from the Strategic National Stockpile
+California,22-Mar,15,0.5,State,CA secured a Major Disaster Declaration (allows them to access federal funding)
+California,23-Mar,8,0.5,State,Modify state park operations (reduce density of visitors)
+California,24-Mar,9,0.5,State,CA to temporarily half intake of inmates and youth 
+California,24-Mar,13,0.5,State,CA to temporarily half intake of inmates and youth 
+,,,,,
+New York,27-Jan,1,1,Federal ,Level 4 Travel Advisory to Epicenter
+New York,30-Jan,1,1,Federal ,Level 4 Travel Advisory to China
+New York,22-Feb,1,0.5,Federal ,Level 2 Travel Advisory to Japan
+New York,22-Feb,1,0.5,Federal ,Level 2 Travel Advisory to S. Korea
+New York,23-Feb,1,0.5,Federal ,Level 1 Travel Advisory for Iran
+New York,23-Feb,1,0.5,Federal ,Level 1 Travel Advisory for Italy
+New York,24-Feb,1,0.5,Federal ,Level 3 Travel Advisory to S. Korea (CDC)
+New York,24-Feb,1,0.5,Federal ,Level 2 Travel Advisory to Iran
+New York,24-Feb,1,0.5,Federal ,Level 2 Travel Advisory to Italy
+New York,25-Feb,0,0.5,Federal ,San Francisco declares state of emergency (allows city officials to assemble resources and personnel to expendite emergency planning measures and boost the ability to deploy a rapid response)
+New York,25-Feb,14,0.5,Federal ,"CDC warns people to ""prepare"""
+New York,26-Feb,1,0.5,Federal ,Level 3 Travel Advisory to S. Korea (U.S. Dept. of State)
+New York,4-Mar,5,0.5,Federal ,CDC widens testing guidelines
+New York,7-Mar,0,1,State,Governor declared SoE
+New York,8-Mar,10,0.5,State,Commuter guidelines (advisory)
+New York,9-Mar,12,0.5,State,Handsanatizers made available
+New York,8-Mar,7,1,State,"School closing, shift to virtual learning"
+New York,10-Mar,8,0.5,Rochelle,Containment zone
+California,11-Mar,1,0.5,Federal ,Travel Restricted from Europe to U.S. for 30 days
+New York,12-Mar,9,0.5,State,>500 ppl events cancelled; limit #ppl gatherings; limit medical visits
+California,13-Mar,0,0.5,Federal ,Trump declares national emergency (frees $50b in federal reserves to fight coronavirus)
+New York,13-Mar,5,0.5,State,Drive-through testing
+New York,17-Mar,8,0.5,NYC,Closure of bars/resaurants
+New York,18-Mar,5,0.5,Federal ,Coronavirus relief package signed (includes free testing for Covid-19 and paid emergency leave)
+New York,18-Mar,9,0.5,Federal ,Coronavirus relief package signed (includes free testing for Covid-19 and paid emergency leave)
+New York,18-Mar,15,0.5,State,Deployable medical units
+New York,19-Mar,1,1,Federal ,Global Level 4 Health Advisory- Do Not Travel
+New York,20-Mar,6,1,State,All non-essential workers WFH
+New York,22-Mar,15,0.5,State,"Trump declared state of disaster, Federal Emergency Management aid"
+New York,24-Mar,2,0.5,State,Those left NYC self-quarantine for 14 days
+,,,,,
+China,1-Jan,11,1,Hubei,Contact mapping
+China,1-Jan,12,1,Hubei,Environmental sanitation
+China,23-Jan,10,1,Hubei,public transportation closed
+China,23-Jan,1,1,Hubei,"flights departing closed (Wuhan, Xiantao, Chibi)"
+China,25-Jan,9,0.5,Nation,Cancels Lunar New Year events
+China,24-Jan,2,1,Hubei,13 cities under lockdown
+China,24-Jan,8,1,Nation,Closing of entertainment venues in major cities
+China,25-Jan,1,1,Hubei,5 more cities with travel restriction
+China,1-Feb,12,0.5,Shanghai,sewage to be treated
+China,1-Feb,9,0.5,Hubei,Marriage license suspended
+China,1-Feb,9,0.5,Hubei,Only 1 person can get groceries every 2 day
+China,1-Feb,6,1,Hunan,No work until Feb 9
+China,1-Feb,7,0.5,Hunan,Semester delayed till Feb 17
+China,1-Feb,6,0.5,Tianjin,Business resumption postponed
+China,1-Feb,9,1,Nation,All filming/entertainment paused
+China,2-Feb,9,0.5,Whenzhou,Only 1 person can get groceries every 2 day
+China,2-Feb,9,0.5,Zhejiang,Only 1 person can get groceries every 2 day
+China,6-Feb,7,1,Zhejiang,Start of semester delayed
+China,6-Feb,7,1,Shanghai,Start of semester delayed
+China,6-Feb,7,1,Chongqin,Start of semester delayed
+China,6-Feb,7,1,Jiangsu,Start of semester delayed
+China,12-Feb,10,0.5,Nation,"no more seatless tickets, social distancing in trails"
+China,12-Feb,1,0.5,Yunan,movement within city restricted
+China,12-Feb,1,1,Guangdong,No vehicles can enter city
+China,12-Feb,1,1,Foshan,No vehicles can enter city
+China,13-Feb,13,0.5,Hubei,1.3M masks made available
+China,13-Feb,6,0.5,Hubei,Postpone of business resumption
+China,13-Feb,2,1,Wuhan,"full lockdown, no exit except for medical reasons from neighborhoods"
+China,13-Feb,2,1,Shiyan,wartime control
+China,13-Feb,2,1,Dawu,wartime control
+China,14-Feb,2,1,Yunmeng,wartime control
+China,14-Feb,2,1,Beijing,all people entering must quanratine for 14 days
+China,14-Feb,7,1,Nation,after school training cannot be in perdson
+China,15-Feb,2,1,Honghu,wartime control
+China,15-Feb,2,1,Jingmen,wartime control
+China,16-Feb,2,1,Hubei,hard quarantine - one person allowed to go out every 3 day
+China,16-Feb,9,0.5,Hubei,all non essential gathering cancelled
+China,16-Feb,6,0.5,Nation,Reduction of 'grassroots' workers
+China,17-Feb,2,1,Xiaogan,Residents banned from leaving home
+China,17-Feb,11,1,Tianjin,strict contact mapping / QR code for entering
+China,17-Feb,7,1,Shanghai,classes moved online
+China,19-Feb,1,1,Zhejiang,No vehicles can enter city
+China,19-Feb,1,1,Wuhan,all vehicles banned from road
+China,20-Feb,6,0.5,Hubei,Postpone of business resumption
+China,21-Feb,1,0.5,Gansu,Increased to Level 3
+China,22-Feb,1,0.5,Liaoning,Increased to Level 3
+China,22-Feb,2,1,Wuhan,14 day quanrantine for discharged patients
+China,23-Feb,1,0.5,Ghizhou,Increased to Level 3
+China,23-Feb,1,0.5,Shanxi,Increased to Level 2
+China,24-Feb,1,0.5,Yunan,Increased to Level 3
+China,24-Feb,1,0.5,Guangdong,Increased to Level 2
+China,24-Feb,1,0.5,Jiangsu,Increased to Level 2
+China,25-Feb,1,0.5,Inner Mongolia,Increased to Level 3
+China,25-Feb,5,0.5,Guangzhou,Tests all inpatients for COVID19
+China,26-Feb,2,1,Beijing,Everyone from infected regions quarantine for 14 days
+China,26-Feb,1,0.5,Jilin,Increased to Level 2
+China,26-Feb,1,0.5,Hainan,Increased to Level 3
+China,26-Feb,5,1,Shandong,all persons incoming tested
+China,26-Feb,5,1,Yantai,all persons incoming tested
+China,3-Mar,2,1,Shanghai,all travellers from regions quarantined for 14 days
+China,3-Mar,2,1,Guangdong,all travellers from regions quarantined for 14 days
+China,11-Mar,6,0.5,Hubei,all other businesses postponed
+China,14-Mar,2,1,Beijing,everyone traveling in quanrantined for 14 days

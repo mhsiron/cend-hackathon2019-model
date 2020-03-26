@@ -5,9 +5,11 @@ import datetime
 
 import pandas as pd
 
-#main_data = pd.read_pickle("./static/data-with-dates-converted.pickle")
+main_data = pd.read_csv("regulation_data.csv")
+print(main_data.columns)
 
 def create_plot(filter=None):
+    print(1)
 
     ## fake data:
     from scipy.stats import norm
@@ -64,7 +66,7 @@ def index():
         map, data = create_plot(filter)
 
     return render_template('index.html', title="Welcome", plot=map, fields=fields,
-                           table=None,date=datetime.date.today(), cases=None)
+                           table=main_data,date=datetime.date.today(), cases=None)
 @app.route('/date', methods=['GET', 'POST'])
 def change_features():
 
