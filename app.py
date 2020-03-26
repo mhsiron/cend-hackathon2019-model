@@ -6,7 +6,6 @@ import datetime
 import pandas as pd
 
 #main_data = pd.read_pickle("./static/data-with-dates-converted.pickle")
-print(main_data.columns)
 
 def create_plot(filter=None):
 
