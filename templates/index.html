@@ -5,49 +5,126 @@
 <div class="row">
     <div class="col-xl-12">
         <div class="alert alert-primary alert-dismissable fade show" role="alert">
-                <h3 class="alert-heading">Important Message</h3>
+                <h3 class="alert-heading">Disclaimer</h3>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
 
                 <p class="justify-content-between">
-                    This is based on an Natural Language Processing and Named Entity Recognition Model,
-                        thus the data is close but not extremely accurate. It is a good example of data that
-                        can be parsed and interpreted using these techniques.
+                    This is a rough model based on preliminary data. It might not be entirely accurate.
+                    It is a very simple model. Please be aware when using.
+
+                    Made by: Akansha, Jeffrey, Johan, Ludovica, Malvika, Martin, Srija
                 </p><hr>
-                <a class="btn btn-dark"
-                   href="http://martinsiron.com/2020/02/03/using-named-entity-recognition-and-natural-language-processing-to-build-a-map-of-accumulated-infections-of-n-cov2019/">
-                    Look at the blog post for more details</a>
         </div>
     </div>
     <div class="col-xl-12">
         <div class="card mb-4">
-            <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Map of Accumulated Infection as of {{ date }}</div>
+            <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Chart of Infection for {{ country or None}}</div>
             <div class="card-body">
-                <div class="chart" id="bargraph">
-                    <script>
-                        var graphs = {{plot | safe}};
-                        Plotly.plot('bargraph',graphs,{});
-                    </script>
-                </div>
-                <div>
-                    <strong> Filter by date: </strong>
-                    <form id="datefilter" method="post">
-                        <div class="input-group date" data-provide="datepicker">
-                            <input name="date" id="datefield" type="text" class="form-control">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
-                                <button type="submit" class="btn btn-primary mb-2">Filter</button>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div>
+
+
+                    <form class="form-horizontal">
+                        <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>Apply A Regulation</legend>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="geo-area">Geographic Area:</label>
+                          <div class="col-md-5">
+                            <select id="geo-area" name="geo-area" class="form-control">
+                              <option value="1">Option one</option>
+                              <option value="2">Option two</option>
+                            </select>
+                          </div>
+                        </div>
+
+
+                        <!-- Select Basic -->
+                        <div class="row no-gutters">
+                        <div class="col-sm-6">
+                            {% for n in range(13) %}
+                                {%   if n%2 ==0 %}
+
+
+
+                        <div class="form-group">
+                            <label class="control-label" for="agg-emergency">{{ fields[n][1] }}:</label>
+                            <div class="col-md-5">
+                                <select id="{{ fields[n][0] }}" name="{{ fields[n][0] }}" class="form-control">
+                                    <option value="1">Not Applied</option>
+                                    <option value="2">50%</option>
+                                    <option value="3">100%</option>
+                                </select>
                             </div>
                         </div>
+
+                        {% endif %}
+
+                            {% endfor %}
+                        </div>
+                        <div class="col-sm-6">
+                             {% for n in range(13) %}
+                                {%  if n%2 == 1 %}
+
+
+
+                        <div class="form-group">
+                            <label class="control-label" for="agg-emergency">{{ fields[n][1] }}:</label>
+                            <div class="col-md-5">
+                                <select id="{{ fields[n][0] }}" name="{{ fields[n][0] }}" class="form-control">
+                                    <option value="1">Not Applied</option>
+                                    <option value="2">50%</option>
+                                    <option value="3">100%</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        {% endif %}
+
+                            {% endfor %}
+                                </div>
+                        </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="apply">Submit:</label>
+                      <div class="col-md-4">
+                        <button id="apply" name="apply" class="btn btn-primary">Apply</button>
+                      </div>
+                    </div>
+
+                    </fieldset>
                     </form>
+
                 </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <legend>Model of Infection Rate</legend>
+                      <div class="chart" id="bargraph">
+
+                            <script>
+                                var graphs = {{plot | safe}};
+                                Plotly.plot('bargraph',graphs,{});
+                            </script>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
             </div>
         </div>
     </div>
     <div class="col-xl-12">
         <div class="card mb-4">
-            <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Information from {{ date }}</div>
+            <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Regulations Enacted for {{ country or None }}</div>
             <div class="card-body">
                 <div class="table-responsive">
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -78,21 +155,23 @@
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                        {%  for index, row in table.iterrows() %}
-                                            <tr>
-                                                <td>{{ row["Source"] }}</td>
-                                                <td>{{ row["titles"] }}</td>
-                                                <td>{{ row["descriptions"] }}</td>
-                                                <td>{{ row["dates"] }}</td>
-                                                <td>{{ row["locations_identified_titles"] }}</td>
-                                                <td>{{ row["new_case_highest-N-text_extract"] }}</td>
-                                                <td>{{ row["acc_case_highest-N-text_extract"] }} <br>
-                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#details-{{ index }}">
-                                                      Details
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        {%  endfor %}
+                                        {% if table %}
+{#                                        {%  for index, row in table %}#}
+{#                                            <tr>#}
+{#                                                <td>{{ row["Source"] }}</td>#}
+{#                                                <td>{{ row["titles"] }}</td>#}
+{#                                                <td>{{ row["descriptions"] }}</td>#}
+{#                                                <td>{{ row["dates"] }}</td>#}
+{#                                                <td>{{ row["locations_identified_titles"] }}</td>#}
+{#                                                <td>{{ row["new_case_highest-N-text_extract"] }}</td>#}
+{#                                                <td>{{ row["acc_case_highest-N-text_extract"] }} <br>#}
+{#                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#details-{{ index }}">#}
+{#                                                      Details#}
+{#                                                    </button>#}
+{#                                                </td>#}
+{#                                            </tr>#}
+{#                                        {%  endfor %}#}
+                                        {% endif %}
                                         </tbody>
                                     </table>
             </div>
@@ -100,6 +179,7 @@
     </div>
 </div>
 
+    {%  if table %}
 {% for index, row in table.iterrows() %}
 
     <!-- Modal -->
@@ -132,6 +212,7 @@
     </div>
 
 {% endfor%}
+    {% endif %}
 
 {%  endblock %}
 

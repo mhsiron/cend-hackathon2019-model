@@ -25,3 +25,4 @@ soupsieve==1.9.5
 visitor==0.1.3
 Werkzeug==0.16.1
 WTForms==2.2.1
+scipy
