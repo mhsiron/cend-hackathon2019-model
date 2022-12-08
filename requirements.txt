@@ -1,6 +1,6 @@
 array-to-latex==0.73
 beautifulsoup4==4.8.2
-certifi==2019.11.28
+certifi==2022.12.7
 Click==7.0
 clipboard==0.0.4
 dominate==2.4.0
